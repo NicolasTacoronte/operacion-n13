@@ -4,7 +4,7 @@ Escape room de apuntar y hacer clic, en el navegador, basado en el cortometraje 
 
 Jandro ha desaparecido por arte de magia y ha dejado una casa llena de trucos. Reúne las tres cartas del tarot, colócalas en su orden, consigue tu gorra de Guardia Civil y supera su último truco... antes de que se acabe el tiempo (10, 6 o 3 minutos).
 
-**Jugar:** _(aquí irá el enlace de GitHub Pages)_
+**Jugar:** https://nicolastacoronte.github.io/operacion-n13/
 
 ## Características
 - 7 salas explorables (salón, cocina, dormitorio, despacho, baño, jardín, coche) más el pasadizo final, con un mapa para viajar.
