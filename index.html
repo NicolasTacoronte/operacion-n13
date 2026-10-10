@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Operación Número 13 · Escape room</title>
+<meta name="description" content="Escape room basado en el cortometraje «Operación Número 13». Jandro ha desaparecido por arte de magia: encuentra las tres cartas del tarot antes de que se acabe el tiempo.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta name="theme-color" content="#22103f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Operación Número 13 · Escape room">
+<meta property="og:description" content="Jandro ha desaparecido por arte de magia. Encuentra las tres cartas del tarot antes de que se acabe el tiempo. Un escape room basado en el cortometraje de Carlos Ballesteros.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Barlow+Condensed:wght@500;700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=7">
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <div class="brand"><span class="o">O</span>peración <b>Nº 13</b></div>
+    <div class="timer" id="timer" role="timer" aria-label="Tiempo restante">30:00</div>
+    <div class="tools">
+      <button class="tool" id="btnMap" title="Mapa de la casa: viaja entre salas">🗺 <span>Mapa</span></button>
+      <button class="tool" id="btnHint" title="Pedir una pista (cuesta 30 segundos)">🔮 <span>Pista</span> <em id="hintCost">−2:00</em></button>
+      <button class="tool" id="btnDots" title="Mostrar u ocultar los puntos de interés" aria-pressed="false">👁 <span>Puntos</span></button>
+      <button class="tool" id="btnTarot" title="Pídele una lectura de tarot a Jandro" hidden>🃏 <span>Tarot</span> <em id="tarotLeft"></em></button>
+      <button class="icon" id="btnSound" title="Efectos de sonido" aria-label="Efectos de sonido">🔊</button>
+      <button class="icon" id="btnRules" title="Cómo se juega" aria-label="Cómo se juega">?</button>
+      <button class="icon" id="btnMenu" title="Menú" aria-label="Volver al menú">⌂</button>
+    </div>
+  </header>
+
+  <main id="game" hidden>
+    <section class="goal" id="goal" aria-live="polite"></section>
+    <nav class="tabs" id="tabs" aria-label="Habitaciones"></nav>
+    <div class="scene" id="scene" aria-label="Habitación"></div>
+    <section class="say" id="say" aria-live="polite">
+      <img class="ava" id="sayAva" src="assets/personajes/pepe.png" alt="">
+      <p id="sayText"></p>
+    </section>
+    <section class="inv-wrap">
+      <div class="inv-head">
+        <h2>Inventario</h2>
+        <span class="using" id="using"></span>
+        <div class="inv-actions">
+          <button class="btn small" id="btnExamine" disabled>Examinar</button>
+          <button class="btn small dark" id="btnDrop" disabled>Soltar</button>
+        </div>
+        <span class="proofs" id="proofs" title="Pruebas de la estafa encontradas"></span>
+      </div>
+      <div class="inv" id="inv"></div>
+    </section>
+  </main>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-box" id="modalBox" role="dialog" aria-modal="true"></div>
+</div>
+<div class="cine" id="cine" hidden aria-live="polite">
+  <div class="cstage" id="cstage"></div>
+  <div class="ccap narr" id="ccap"><div class="cname" id="cname"></div><p class="ctext" id="ctext"></p><span class="cnext" id="cnext">▶</span></div>
+  <button class="cskip" id="cskip">Saltar escena ⏭</button>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="audio.js?v=7"></script>
+<script src="tarot.js?v=7"></script>
+<script src="viewer3d.js?v=7"></script>
+<script src="escape.js?v=7"></script>
+<script src="scenes.js?v=7"></script>
+<script src="ui.js?v=8"></script>
+<noscript><p style="color:#fff4cf;font-family:sans-serif;padding:24px">Este juego necesita JavaScript activado para funcionar.</p></noscript>
+</body>
+</html>
